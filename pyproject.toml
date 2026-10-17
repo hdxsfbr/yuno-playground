@@ -1,0 +1,8 @@
+[project]
+name = "yuno-playground"
+version = "0.1.0"
+description = "Playground for Yuno's project-repository feature"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
