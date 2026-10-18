@@ -16,6 +16,10 @@ def test_multiply():
     assert multiply(1.5, 2) == 3.0
 
 
+def test_gcd_zero_zero():
+    assert gcd(0, 0) == 0
+
+
 def test_gcd():
     assert gcd(12, 18) == 6
     assert gcd(17, 5) == 1

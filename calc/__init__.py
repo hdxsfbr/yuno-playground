@@ -14,7 +14,7 @@ def multiply(a: float, b: float) -> float:
 
 
 def gcd(a: int, b: int) -> int:
-    """Return the non-negative greatest common divisor of a and b (Euclid)."""
+    """Return the non-negative gcd of a and b by Euclid: replace (a, b) with (b, a % b) until b is 0."""
     a, b = abs(a), abs(b)
     while b:
         a, b = b, a % b
