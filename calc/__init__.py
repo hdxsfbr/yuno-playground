@@ -26,3 +26,13 @@ def lcm(a: int, b: int) -> int:
     if a == 0 or b == 0:
         return 0
     return abs(a * b) // gcd(a, b)
+
+
+def fibonacci(n: int) -> int:
+    """Return the nth Fibonacci number (fibonacci(0) == 0); raise ValueError if n < 0."""
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
