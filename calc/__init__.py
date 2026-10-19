@@ -26,3 +26,8 @@ def lcm(a: int, b: int) -> int:
     if a == 0 or b == 0:
         return 0
     return abs(a * b) // gcd(a, b)
+
+
+def greet(name: str) -> str:
+    """Return a greeting in Portuguese for the given name."""
+    return f"Olá, {name}!"
