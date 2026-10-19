@@ -1,5 +1,7 @@
 """A small calculator module."""
 
+import re
+
 
 def add(a: float, b: float) -> float:
     return a + b
@@ -26,3 +28,8 @@ def lcm(a: int, b: int) -> int:
     if a == 0 or b == 0:
         return 0
     return abs(a * b) // gcd(a, b)
+
+
+def slugify(text: str) -> str:
+    """Return text lowercased with runs of non-alphanumerics as single hyphens, trimmed."""
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
