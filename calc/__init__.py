@@ -26,3 +26,9 @@ def lcm(a: int, b: int) -> int:
     if a == 0 or b == 0:
         return 0
     return abs(a * b) // gcd(a, b)
+
+
+def slugify(text: str) -> str:
+    """Return text lowercased, with punctuation removed and whitespace runs turned into hyphens."""
+    cleaned = "".join(c for c in text.lower() if c.isalnum() or c.isspace() or c in "-_")
+    return "-".join(cleaned.split())
