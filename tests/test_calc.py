@@ -1,4 +1,4 @@
-from calc import add, gcd, lcm, multiply, subtract
+from calc import add, gcd, greet, lcm, multiply, subtract
 
 
 def test_add():
@@ -34,3 +34,7 @@ def test_lcm_zero():
     assert lcm(0, 5) == 0
     assert lcm(5, 0) == 0
     assert lcm(0, 0) == 0
+
+
+def test_greet():
+    assert greet("Ana") == "¡Hola, Ana!"
