@@ -1,4 +1,4 @@
-from calc import add, gcd, lcm, multiply, subtract
+from calc import add, gcd, lcm, multiply, slugify, subtract
 
 
 def test_add():
@@ -34,3 +34,16 @@ def test_lcm_zero():
     assert lcm(0, 5) == 0
     assert lcm(5, 0) == 0
     assert lcm(0, 0) == 0
+
+
+def test_slugify_empty():
+    assert slugify("") == ""
+
+
+def test_slugify_spaces():
+    assert slugify("  Hello   World ") == "hello-world"
+
+
+def test_slugify_punctuation():
+    assert slugify("Hi, there!! -- OK?") == "hi-there-ok"
+    assert slugify("!!!") == ""
